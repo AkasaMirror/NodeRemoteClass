@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title><%= title %></title>
+		<link rel="stylesheet" type="text/css" href="/stylesheets/style_meeting.css">
+  </head>
+
+  <body class="wrapper">
+
+    <header id="header">
+			
+			<p id="my-id" class="header">ID : <span>abcdefg</span></p>
+      <p class="header">room name : <span><%= form.channelName %></span></p>
+      <p class="header">your name : <span><%= form.memberName %></span></p>
+      <input type="hidden" id="authToken" name="authToken" value="<%= form.authToken %>">
+
+    </header>
+
+    <main>
+			
+      <div class="container">
+
+        <div id="teacher-face" class="upper item_upper block">
+
+          <p>Teacher Space</p>
+  
+        </div>
+  
+        <div id="teaching-room" class="upper item_upper block">
+  
+          <p>ClassRoom Space</p>
+  
+        </div>
+
+      </div>
+
+			<div class="video-area block">
+
+        <div id="local-video-area">
+
+          <p>LocalVideo Space</p>
+          <video id='local-video' width="400px" muted playsinline></video>
+  
+        </div>
+  
+        <div id="remote-video-area">
+  
+          <p>RemoteVideos Space</p>
+  
+        </div>
+
+      </div>
+
+    </main>
+
+    <footer id="button-area" class="block">
+
+      <div id="room-button">
+
+        <p>RoomButton Space</p>
+        <button id="exit-button">exit</button>
+        <button id="close-button">close</button>
+      
+      </div>
+
+      <div id="meeting-button">
+
+        <p>MediaOn-Off Space</p>
+        <button id="video-button">video</button>
+        <button id="audio-button">audio</button>
+
+      </div>
+
+      <div id="chatting-button">
+
+        <p>Chat Space</p>
+
+      </div>
+
+      <div id="express-state">
+
+        <p>Express My State Space</p>
+
+      </div>
+
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@skyway-sdk/room/dist/skyway_room-latest.js"></script>
+    <script src="/javascripts/web_meeting.js"></script>
+  </body>
+
+</html>

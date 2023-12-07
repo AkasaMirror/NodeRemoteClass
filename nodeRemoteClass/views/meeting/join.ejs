@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+  <header>
+    <h1><%= title %></h1>
+  </header>
+
+	<div role="main">
+		<form method="post" action="/meeting/join">
+			<section>
+				<div class="form-part">
+					<label for="channel-name-text">Channel Name</label>
+					<input id="channel-name-text" name="channelName" value="<%= form.channelName %>">
+				</div>
+				<div class="form-part">
+					<label for="member-name-text">Member Name</label>
+					<input id="member-name-text"name="memberName" value="<%= form.memberName %>">
+				</div>
+				<div class="btn-wrapper">
+					<button id="get-btn">Get Credential</button>
+					<button id="get-meeting-page">join</button>
+				</div>
+			</section>
+		</form>
+	</div>
+</body>
+
+</html>
